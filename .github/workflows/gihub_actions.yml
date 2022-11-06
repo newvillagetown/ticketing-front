@@ -43,11 +43,15 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: ls -a via ssh
-        uses: fifsky/ssh-action@master
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
         with:
-          command: |
-            whiami
           host: ${{ secrets.HOST }}
-          user: root
-          key: ${{ secrets.PRIVATE_KEY}}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: whoami
