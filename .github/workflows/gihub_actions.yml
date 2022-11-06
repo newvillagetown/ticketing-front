@@ -43,6 +43,13 @@ jobs:
       - name: Build
         run: yarn build
 
+name: DEPLOY
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -54,4 +61,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: mkdir hi
+          script: whoami
