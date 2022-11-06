@@ -43,14 +43,14 @@ jobs:
       - name: Build
         run: yarn build
 
-  - name: Deploy
-    uses: actions/checkout@v2
-    uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.REMOTE_IP }}
-        username: ${{ secrets.REMOTE_SSH_ID }}
-        key: ${{ secrets.REMOTE_SSH_KEY }}
-        port: ${{ secrets.REMOTE_SSH_PORT }}
-        script: |
-          whoami
-          git pull origin master
+      - name: Deploy
+        uses: actions/checkout@v2
+        uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.REMOTE_IP }}
+            username: ${{ secrets.REMOTE_SSH_ID }}
+            key: ${{ secrets.REMOTE_SSH_KEY }}
+            port: ${{ secrets.REMOTE_SSH_PORT }}
+            script: |
+              whoami
+              git pull origin master
