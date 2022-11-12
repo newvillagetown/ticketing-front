@@ -4,10 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+- node version: 16.17.1
 
 ```bash
-npm run dev
 # or
 yarn dev
 ```
