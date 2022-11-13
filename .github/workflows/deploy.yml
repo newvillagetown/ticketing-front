@@ -53,4 +53,5 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
+            export PATH=/home/ubuntu/.nvm/versions/node/v16.17.1/bin:$PATH
             ./deploy.sh
