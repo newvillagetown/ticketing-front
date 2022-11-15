@@ -1,11 +1,8 @@
 import { useEffect } from "react";
+import HomePage from "src/pages/home/Home.page";
 
 const Home = () => {
-  return (
-    <div>
-      <a href="https://dev-ticketing.breathings.net/google/signin">login</a>
-    </div>
-  );
+  return <HomePage />;
 };
 
 export default Home;
