@@ -1,36 +1,53 @@
 @import "src/scss/variables";
+@import "src/scss/mixin";
+@import "src/scss/animation";
 
 .wrap {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  background: $color-header-bg;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: $z-index-header;
 }
 .inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  max-width: $pc-max-width;
+  align-items: center;
   margin: auto;
-  padding: 0 30px;
-  height: 56px;
+  padding: 0 60px;
+  height: $pc-header-height;
 }
 .title {
   font-size: 30px;
+  font-weight: 800;
   line-height: 36px;
-  color: #fff;
+  background: $color-title;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .login {
-  padding: 8px 16px;
-  background: $color-login-btn;
+  width: 76px;
+  height: 36px;
   border-radius: 6px;
-  font-size: 16px;
-  line-height: 18px;
-  color: #fff;
 
-  &:hover {
-    transform: scale(1.1);
+  @include gradientBackground($color-header-bg);
+
+  &:hover::before {
+    animation: 3s wave linear infinite;
   }
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+  color: $color-btn-color;
 }

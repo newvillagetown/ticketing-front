@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Header.organism.module.scss";
 import LinkAtom, { LinkTarget } from "src/components/atoms/link/Link.atom";
-import ButtonAtom from "src/components/atoms/button/Button.atom";
 
 const HeaderOrganism = () => {
   return (
@@ -15,7 +14,7 @@ const HeaderOrganism = () => {
             href="https://dev-ticketing.breathings.net/google/signin"
             className={styles.login}
           >
-            Sign in
+            <span className={styles.text}>Sign in</span>
           </LinkAtom>
         </div>
       </div>

@@ -1,8 +1,17 @@
 @charset "UTF-8";
 
 // 해상도
-$pc-max-width: 980px;
+$pc-content-width: 980px;
+$pc-header-height: 56px;
 
 // 색상
-$color-header-bg: linear-gradient(to right, rgba(#fc5c7d, 1), rgba(#6a82fb, 1));
+$color-header-bg: linear-gradient(120deg, rgba(#fc5c7d, 1), rgba(#6a82fb, 1));
 $color-login-btn: linear-gradient(to right, #005c97, #363795);
+$color-title: linear-gradient(to right, #005c97, #363795);
+$color-insta-radial: radial-gradient(#fc00ff, #00dbde);
+
+//
+$color-btn-color: #ffffffec;
+
+// z-index
+$z-index-header: 1000;
