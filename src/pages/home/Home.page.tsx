@@ -1,11 +1,16 @@
 import React from "react";
-import HeaderOrganism from "src/components/organisms/header/Header.organism";
+import LinkAtom from "src/components/atoms/link/Link.atom";
 import styles from "./Home.page.module.scss";
 
 const HomePage = () => {
   return (
     <div className={styles.wrap}>
-      <HeaderOrganism />
+      <div className={styles.content}>
+        컨텐츠
+        <LinkAtom href="/product" className={styles.link}>
+          <span className={styles.text}>예매하러 가기</span>
+        </LinkAtom>
+      </div>
     </div>
   );
 };
