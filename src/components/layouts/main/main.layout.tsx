@@ -7,7 +7,6 @@ type Props = {
 };
 
 const MainLayout = ({ children }: Props) => {
-  console.log(children, 832783728937);
   return (
     <>
       <HeaderOrganism />
