@@ -1,11 +1,12 @@
 import React from "react";
 import LinkAtom from "src/components/atoms/link/Link.atom";
 import MainLayout from "src/components/layouts/main/main.layout";
+import ProductPage from "src/pages/product/Product.page";
 
 const Product = () => {
   return (
     <div>
-      아직 아무것도 없소요
+      <ProductPage />
       <br />
       <LinkAtom href="/">홈 화면으로</LinkAtom>
     </div>
