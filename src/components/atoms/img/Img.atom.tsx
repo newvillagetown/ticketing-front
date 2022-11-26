@@ -13,6 +13,10 @@ const ImgAtom = ({ src, width, height, alt, ...props }: Props) => {
     return width && height ? false : true;
   }, [width, height]);
 
+  const customLoader = ({ src }: { src: string }) => {
+    return src;
+  };
+
   return (
     <Image
       src={src}
@@ -20,6 +24,7 @@ const ImgAtom = ({ src, width, height, alt, ...props }: Props) => {
       height={useFill ? undefined : height}
       alt={alt || ""}
       fill={useFill}
+      loader={customLoader}
       {...props}
     />
   );
