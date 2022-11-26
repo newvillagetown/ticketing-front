@@ -1,15 +1,15 @@
-import React from "react";
+import React, { HTMLInputTypeAttribute } from "react";
 import styles from "./Input.atom.module.scss";
 import clsx from "clsx";
 
 type Props = {
   id: string;
   value: string;
-  type?: string;
+  type: string;
   placeholder?: string;
   wrapClassName?: string;
   inputClassName?: string;
-  onClick?(): void;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 };
 
 const InputAtom = ({
@@ -19,7 +19,7 @@ const InputAtom = ({
   placeholder,
   wrapClassName,
   inputClassName,
-  onClick,
+  onChange,
 }: Props) => {
   return (
     <div className={clsx(styles.wrap, wrapClassName)}>
@@ -28,8 +28,8 @@ const InputAtom = ({
         type={type}
         className={clsx(styles.input, inputClassName)}
         placeholder={placeholder}
-        onClick={onClick}
         value={value}
+        onChange={onChange}
       />
     </div>
   );
