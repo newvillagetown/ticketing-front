@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
 // 해상도
+$pc-content-max-wdith: 1200px;
 $pc-content-width: 980px;
 $pc-header-height: 56px;
+$pc-content-padding: 40px;
 
 // 색상
 $color-header-bg: linear-gradient(120deg, rgba(#fc5c7d, 1), rgba(#6a82fb, 1));
