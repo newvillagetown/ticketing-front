@@ -1,12 +1,7 @@
 @import "/src/scss/variables.scss";
 
 .wrap {
-  padding: $pc-content-padding;
-}
-
-.inner {
   margin: 0 auto;
   max-width: $pc-content-max-wdith;
-  background-color: #ffa500;
   padding: 20px;
 }
