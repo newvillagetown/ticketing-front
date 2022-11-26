@@ -1,0 +1,7 @@
+@import "/src/scss/variables";
+
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 20px;
+}
