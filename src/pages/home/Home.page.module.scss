@@ -13,9 +13,9 @@
 
 .content {
   flex: 1;
-  padding: 30px;
+  padding: $pc-content-padding;
   max-width: $pc-content-width;
-  background-color: #fff;
+  background-color: $color-white;
   box-sizing: border-box;
 }
 
