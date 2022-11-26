@@ -12,8 +12,9 @@
 }
 
 .content {
+  flex: 1;
   padding: 30px;
-  width: $pc-content-width;
+  max-width: $pc-content-width;
   background-color: #fff;
   box-sizing: border-box;
 }
