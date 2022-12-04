@@ -1,4 +1,4 @@
-import { ViewType } from "./../config/enum";
+import { ViewType } from "../config/enum";
 import { atom } from "recoil";
 import { useRecoilState } from "recoil";
 
@@ -13,7 +13,12 @@ const useViewTypeRecoil = () => {
   const isCard = viewType === ViewType.CARD;
   const isList = viewType === ViewType.LIST;
 
-  return { viewType, setViewType, isCard, isList };
+  return {
+    viewType,
+    setViewType,
+    isCard,
+    isList,
+  };
 };
 
 export default useViewTypeRecoil;
