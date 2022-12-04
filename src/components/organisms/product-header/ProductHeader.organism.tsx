@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import styles from "./ProductHeader.organism.module.scss";
 import InputAtom from "src/components/atoms/input/Input.atom";
 import { PRODUCT_SEARCH_INPUT_ID } from "src/config/dom-id";
+import { ViewType } from "src/config/enum";
 
-const ProductHeaderOrganism = () => {
+interface Props {
+  viewType: ViewType;
+  onClickViewBtn(): void;
+}
+
+const ProductHeaderOrganism = ({ viewType, onClickViewBtn }: Props) => {
   const [inputValue, setInputValue] = useState<string>("");
 
   const onChangeInput = (ev: React.ChangeEvent<HTMLInputElement>): void => {
@@ -24,8 +30,12 @@ const ProductHeaderOrganism = () => {
       />
 
       <div>
-        <button type="button">필터</button>
-        <button type="button">카드뷰</button>
+        <button type="button" onClick={onClickViewBtn}>
+          필터
+        </button>
+        <button type="button" onClick={onClickViewBtn}>
+          카드뷰
+        </button>
         <button type="button">리스트뷰</button>
       </div>
     </div>
