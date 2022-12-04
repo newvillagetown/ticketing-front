@@ -1,22 +1,35 @@
 import React from "react";
 import ImgAtom from "src/components/atoms/img/Img.atom";
 import styles from "./Item.module.scss";
+import useProductRecoil from "src/hooks-recoil/useProductRecoil";
 
 interface Props {
+  productId: string;
   src: string;
   itemName: string;
   date: string;
-  onClick(): void;
 }
 
-const Item = ({ src, itemName, date, onClick }: Props) => {
+const Item = ({ productId, src, itemName, date }: Props) => {
+  const { selectedItemKey, setSelectedItemKey, isOpenPreview } =
+    useProductRecoil();
+
+  const onClickItem = () => {
+    if (selectedItemKey === productId) {
+      setSelectedItemKey("");
+    } else {
+      setSelectedItemKey(productId);
+    }
+  };
+
   return (
-    <button type="button" className={styles.wrap} onClick={onClick}>
+    <button type="button" className={styles.wrap} onClick={onClickItem}>
       <span className={styles.img}>
         <ImgAtom src={src} fill={true} alt="" />
       </span>
       <span className={styles.date}>{date}</span>
       <strong>{itemName}</strong>
+      <p>{productId}</p>
     </button>
   );
 };

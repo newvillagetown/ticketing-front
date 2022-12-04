@@ -19,12 +19,10 @@ const ProductItemsOrganism = ({ items }: Props) => {
       {items?.map(({ key, src, itemName, date }) => (
         <Item
           key={key}
+          productId={key}
           src={src}
           itemName={itemName}
           date={date}
-          onClick={() => {
-            console.log("hello");
-          }}
         />
       ))}
     </div>
