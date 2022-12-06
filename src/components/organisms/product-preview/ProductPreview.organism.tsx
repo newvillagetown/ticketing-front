@@ -7,7 +7,7 @@ const ProductCardViewOrganism = () => {
 
   return (
     <div className={styles.wrap}>
-      <div>이미지</div>
+      <div className={styles.image}>이미지</div>
       <div>제목</div>
       <div>날짜</div>
       <div>부연설명</div>

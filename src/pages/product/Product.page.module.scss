@@ -3,10 +3,20 @@
 .wrap {
   margin: 0 auto;
   max-width: $pc-content-max-wdith;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .view {
+  position: relative;
   display: flex;
   justify-content: center;
+}
+
+.preview {
+  position: sticky;
+  top: calc($pc-product-header-height + $pc-header-height);
+  width: 50%;
+  height: calc(100vh - $pc-product-header-height - $pc-header-height);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }

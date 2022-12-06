@@ -27,9 +27,13 @@ const ProductPage = () => {
         <Suspense fallback={"등록된 이벤트가 없어요🫤"}>
           <ProductItemsOrganism items={productDummy(30)} />
         </Suspense>
-        <Suspense fallback={"이벤트를 불러오는데 실패했어요😰"}>
-          {isOpenPreview && <ProductPreviewOrganism />}
-        </Suspense>
+        {isOpenPreview && (
+          <div className={styles.preview}>
+            <Suspense fallback={"이벤트를 불러오는데 실패했어요😰"}>
+              <ProductPreviewOrganism />
+            </Suspense>
+          </div>
+        )}
       </div>
     </div>
   );

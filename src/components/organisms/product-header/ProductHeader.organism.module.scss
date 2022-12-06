@@ -1,7 +1,9 @@
+@import "src/scss/variables";
+
 .wrap {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  height: $pc-product-header-height;
 
   button {
     margin-left: 16px;
