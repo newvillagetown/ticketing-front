@@ -6,7 +6,7 @@ import { ViewType } from "src/config/enum";
 
 interface Props {
   viewType: ViewType;
-  onClickViewBtn(): void;
+  onClickViewBtn: () => void;
 }
 
 const ProductHeaderOrganism = ({ viewType, onClickViewBtn }: Props) => {
