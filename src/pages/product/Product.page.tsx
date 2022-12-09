@@ -2,6 +2,7 @@ import React, { Suspense, useState } from "react";
 import ProductHeaderOrganism from "src/components/organisms/product-header/ProductHeader.organism";
 import ProductItemsOrganism from "src/components/organisms/product-items/ProductItems.organism";
 import ProductPreviewOrganism from "src/components/organisms/product-preview/ProductPreview.organism";
+import ProductHeaderOrganism from "src/components/organisms/product-header/ProductHeader.organism";
 import styles from "./Product.page.module.scss";
 import { productDummy } from "src/assets/dummy/product";
 import { ViewType } from "src/config/enum";
