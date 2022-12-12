@@ -13,14 +13,14 @@ const ProductPage = () => {
   const { viewType, setViewType, isCard, isList } = useViewTypeRecoil();
   const { isOpenPreview } = useProductRecoil();
 
-  const changeViewType = () => {
+  const handleChangeViewType = () => {
     isCard ? setViewType(ViewType.LIST) : setViewType(ViewType.CARD);
   };
 
   return (
     <div className={styles.wrap}>
       <ProductHeaderOrganism
-        onClickViewBtn={changeViewType}
+        onClickViewBtn={handleChangeViewType}
         viewType={viewType}
       />
       <div className={clsx(styles.view, { ["expand"]: isOpenPreview })}>

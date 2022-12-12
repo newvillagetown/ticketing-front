@@ -12,7 +12,7 @@ interface Props {
 const ProductHeaderOrganism = ({ viewType, onClickViewBtn }: Props) => {
   const [inputValue, setInputValue] = useState<string>("");
 
-  const onChangeInput = (ev: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleInputChange = (ev: React.ChangeEvent<HTMLInputElement>): void => {
     setInputValue(ev.target.value);
   };
 
@@ -26,7 +26,7 @@ const ProductHeaderOrganism = ({ viewType, onClickViewBtn }: Props) => {
         value={inputValue}
         type="text"
         placeholder="검색할 단어를 입력해주세요."
-        onChange={onChangeInput}
+        onChange={handleInputChange}
       />
 
       <div>

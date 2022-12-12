@@ -14,7 +14,7 @@ const Item = ({ productId, src, itemName, date }: Props) => {
   const { selectedItemKey, setSelectedItemKey, isOpenPreview } =
     useProductRecoil();
 
-  const onClickItem = () => {
+  const handleItemClick = () => {
     if (selectedItemKey === productId) {
       setSelectedItemKey("");
     } else {
@@ -23,7 +23,7 @@ const Item = ({ productId, src, itemName, date }: Props) => {
   };
 
   return (
-    <button type="button" className={styles.wrap} onClick={onClickItem}>
+    <button type="button" className={styles.wrap} onClick={handleItemClick}>
       <span className={styles.img}>
         <ImgAtom src={src} fill={true} alt="" />
       </span>
