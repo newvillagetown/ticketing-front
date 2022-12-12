@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./Header.organism.module.scss";
-import LinkAtom, { LinkTarget } from "src/components/atoms/link/Link.atom";
+import styles from "./HeaderOrganism.module.scss";
+import LinkAtom, { LinkTarget } from "src/components/atoms/link/LinkAtom";
 import { loginURL } from "src/config/url.config";
 
 const HeaderOrganism = () => {

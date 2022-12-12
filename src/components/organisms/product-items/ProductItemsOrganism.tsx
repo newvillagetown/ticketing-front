@@ -1,6 +1,6 @@
 import React from "react";
 import Item from "./Item";
-import styles from "./ProductItems.organism.module.scss";
+import styles from "./ProductItemsOrganism.module.scss";
 
 export interface ProductItemProps {
   key: string;

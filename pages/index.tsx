@@ -1,5 +1,5 @@
-import HomePage from "src/pages/home/Home.page";
-import MainLayout from "src/components/layouts/main/main.layout";
+import HomePage from "src/pages/home/HomePage";
+import MainLayout from "src/components/layouts/main/MainLayout";
 import React from "react";
 
 const Home = () => {

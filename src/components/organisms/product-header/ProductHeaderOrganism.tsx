@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "./ProductHeader.organism.module.scss";
-import InputAtom from "src/components/atoms/input/Input.atom";
+import styles from "./ProductHeaderOrganism.module.scss";
+import InputAtom from "src/components/atoms/input/InputAtom";
 import { PRODUCT_SEARCH_INPUT_ID } from "src/config/dom-id";
 import { ViewType } from "src/config/enum";
 

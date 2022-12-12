@@ -1,6 +1,6 @@
 import React from "react";
 import useProductRecoil from "src/hooks-recoil/useProductRecoil";
-import styles from "./ProductPreview.organism.module.scss";
+import styles from "./ProductPreviewOrganism.module.scss";
 
 const ProductCardViewOrganism = () => {
   const { selectedItemKey } = useProductRecoil();

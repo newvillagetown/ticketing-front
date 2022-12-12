@@ -1,6 +1,6 @@
 import React from "react";
-import MainLayout from "src/components/layouts/main/main.layout";
-import ProductPage from "src/pages/product/Product.page";
+import MainLayout from "src/components/layouts/main/MainLayout";
+import ProductPage from "src/pages/product/ProductPage";
 
 const Product = () => {
   return <ProductPage />;

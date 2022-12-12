@@ -1,5 +1,5 @@
 import React from "react";
-import ImgAtom from "src/components/atoms/img/Img.atom";
+import ImgAtom from "src/components/atoms/img/ImgAtom";
 import styles from "./Item.module.scss";
 import useProductRecoil from "src/hooks-recoil/useProductRecoil";
 
