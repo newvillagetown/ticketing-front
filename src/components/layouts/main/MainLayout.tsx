@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import HeaderOrganism from "src/components/organisms/header/Header.organism";
-import styles from "./main.layout.module.scss";
+import HeaderOrganism from "src/components/organisms/header/HeaderOrganism";
+import styles from "./MainLayout.module.scss";
 
 type Props = {
   children: ReactNode;

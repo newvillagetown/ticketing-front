@@ -1,6 +1,6 @@
 import React from "react";
 import Item from "./Item";
-import styles from "./ProductItems.organism.module.scss";
+import styles from "./ProductItemsOrganism.module.scss";
 
 export interface ProductItemProps {
   key: string;
@@ -19,12 +19,10 @@ const ProductItemsOrganism = ({ items }: Props) => {
       {items?.map(({ key, src, itemName, date }) => (
         <Item
           key={key}
+          productId={key}
           src={src}
           itemName={itemName}
           date={date}
-          onClick={() => {
-            console.log("hello");
-          }}
         />
       ))}
     </div>

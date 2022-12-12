@@ -1,4 +1,4 @@
-import { ProductItemProps } from "src/components/organisms/product-items/ProductItems.organism";
+import { ProductItemProps } from "src/components/organisms/product-items/ProductItemsOrganism";
 
 export function productDummy(count: number) {
   let data: ProductItemProps[] = [];

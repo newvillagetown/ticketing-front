@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import styles from "./ProductHeader.organism.module.scss";
-import InputAtom from "src/components/atoms/input/Input.atom";
+import styles from "./ProductHeaderOrganism.module.scss";
+import InputAtom from "src/components/atoms/input/InputAtom";
 import { PRODUCT_SEARCH_INPUT_ID } from "src/config/dom-id";
+import { ViewType } from "src/config/enum";
 
-const ProductHeaderOrganism = () => {
+interface Props {
+  viewType: ViewType;
+  onClickViewBtn: () => void;
+}
+
+const ProductHeaderOrganism = ({ viewType, onClickViewBtn }: Props) => {
   const [inputValue, setInputValue] = useState<string>("");
 
-  const onChangeInput = (ev: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleInputChange = (ev: React.ChangeEvent<HTMLInputElement>): void => {
     setInputValue(ev.target.value);
   };
 
@@ -20,12 +26,16 @@ const ProductHeaderOrganism = () => {
         value={inputValue}
         type="text"
         placeholder="검색할 단어를 입력해주세요."
-        onChange={onChangeInput}
+        onChange={handleInputChange}
       />
 
       <div>
-        <button type="button">필터</button>
-        <button type="button">카드뷰</button>
+        <button type="button" onClick={onClickViewBtn}>
+          필터
+        </button>
+        <button type="button" onClick={onClickViewBtn}>
+          카드뷰
+        </button>
         <button type="button">리스트뷰</button>
       </div>
     </div>

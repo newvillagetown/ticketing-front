@@ -1,6 +1,6 @@
 import React from "react";
-import LinkAtom from "src/components/atoms/link/Link.atom";
-import styles from "./Home.page.module.scss";
+import LinkAtom from "src/components/atoms/link/LinkAtom";
+import styles from "./HomePage.module.scss";
 
 const HomePage = () => {
   return (

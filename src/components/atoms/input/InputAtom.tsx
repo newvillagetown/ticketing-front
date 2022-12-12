@@ -1,5 +1,5 @@
 import React, { HTMLInputTypeAttribute } from "react";
-import styles from "./Input.atom.module.scss";
+import styles from "./InputAtom.module.scss";
 import clsx from "clsx";
 
 type Props = {
